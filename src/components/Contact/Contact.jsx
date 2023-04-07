@@ -4,6 +4,7 @@ import {
   ContactListItemName,
   ContactListItemButton,
 } from './Contact.styled';
+import PropTypes from 'prop-types';
 
 export const Contact = p => {
   const { name, number, id } = p.contactItem;
@@ -16,4 +17,11 @@ export const Contact = p => {
       </ContactListItemButton>
     </ContactListItem>
   );
+};
+
+Contact.propTypes = {
+  id: PropTypes.any.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
+  deleteContact: PropTypes.func,
 };

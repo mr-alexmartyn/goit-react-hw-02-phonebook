@@ -74,10 +74,4 @@ export class App extends Component {
 App.propTypes = {
   onSubmit: PropTypes.func,
   filter: PropTypes.string,
-  contacts: PropTypes.shape({
-    id: PropTypes.any.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.number.isRequired,
-    deleteContact: PropTypes.func,
-  }),
 };
